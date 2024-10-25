@@ -13,3 +13,4 @@ C:\Users\abdul\source\repos\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\n
 C:\Users\abdul\source\repos\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net8.0\refint\ETicaretAPI.Application.dll
 C:\Users\abdul\source\repos\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.pdb
 C:\Users\abdul\source\repos\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net8.0\ref\ETicaretAPI.Application.dll
+C:\Users\abdul\source\repos\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.sourcelink.json

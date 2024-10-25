@@ -142,3 +142,5 @@ C:\Users\abdul\source\repos\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\n
 C:\Users\abdul\source\repos\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
 C:\Users\abdul\source\repos\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net8.0\ETicaretAPI.SignalR.dll
 C:\Users\abdul\source\repos\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net8.0\ETicaretAPI.SignalR.pdb
+C:\Users\abdul\source\repos\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net8.0\ETicaretAPI.API.staticwebassets.runtime.json
+C:\Users\abdul\source\repos\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net8.0\ETicaretAPI.API.sourcelink.json

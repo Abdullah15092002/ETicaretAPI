@@ -15,3 +15,4 @@ C:\Users\abdul\source\repos\ETicaretAPI\Infrastructure\ETicaretAPI.Persistance\o
 C:\Users\abdul\source\repos\ETicaretAPI\Infrastructure\ETicaretAPI.Persistance\obj\Debug\net8.0\refint\ETicaretAPI.Persistance.dll
 C:\Users\abdul\source\repos\ETicaretAPI\Infrastructure\ETicaretAPI.Persistance\obj\Debug\net8.0\ETicaretAPI.Persistance.pdb
 C:\Users\abdul\source\repos\ETicaretAPI\Infrastructure\ETicaretAPI.Persistance\obj\Debug\net8.0\ref\ETicaretAPI.Persistance.dll
+C:\Users\abdul\source\repos\ETicaretAPI\Infrastructure\ETicaretAPI.Persistance\obj\Debug\net8.0\ETicaretAPI.Persistance.sourcelink.json
