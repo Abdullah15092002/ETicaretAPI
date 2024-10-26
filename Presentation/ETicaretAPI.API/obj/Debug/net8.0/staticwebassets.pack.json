@@ -1,8 +1,24 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\abdul\\source\\repos\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\1155814055.png",
-      "PackagePath": "staticwebassets\\resource\\product-images\\1155814055.png"
+      "Id": "C:\\Users\\abdul\\source\\repos\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\1444302977.png",
+      "PackagePath": "staticwebassets\\resource\\product-images\\1444302977.png"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\source\\repos\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\1505009849.png",
+      "PackagePath": "staticwebassets\\resource\\product-images\\1505009849.png"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\source\\repos\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\1545426541.png",
+      "PackagePath": "staticwebassets\\resource\\product-images\\1545426541.png"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\source\\repos\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\520457219.png",
+      "PackagePath": "staticwebassets\\resource\\product-images\\520457219.png"
+    },
+    {
+      "Id": "C:\\Users\\abdul\\source\\repos\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\695930029.png",
+      "PackagePath": "staticwebassets\\resource\\product-images\\695930029.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ETicaretAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",

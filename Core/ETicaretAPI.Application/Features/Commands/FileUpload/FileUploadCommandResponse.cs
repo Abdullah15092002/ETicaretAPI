@@ -8,5 +8,6 @@ namespace ETicaretAPI.Application.Features.Commands.FileUpload
 {
     public class FileUploadCommandResponse
     {
+        public bool state = true; 
     }
 }

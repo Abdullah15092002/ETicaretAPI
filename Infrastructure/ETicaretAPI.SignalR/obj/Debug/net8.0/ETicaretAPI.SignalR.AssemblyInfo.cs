@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ETicaretAPI.SignalR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbb4b6595b9b677d1872130bd9bd105f6b10e67c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97da672e4deac76ed0bf8daef05c0513f850a8e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ETicaretAPI.SignalR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ETicaretAPI.SignalR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

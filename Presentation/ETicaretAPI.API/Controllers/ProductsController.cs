@@ -53,7 +53,8 @@ namespace ETicaretAPI.API.Controllers
 
         [HttpGet("{Id}")]
         [Authorize(AuthenticationSchemes = "Admin")]
-        public async Task<IActionResult> Get([FromRoute] GetByIdProductQueryRequest getByIdProductQueryRequest) {
+        public async Task<IActionResult> Get([FromRoute] GetByIdProductQueryRequest getByIdProductQueryRequest)
+        {
             GetByIdProductQueryResponse response = await _mediator.Send(getByIdProductQueryRequest);
             return Ok(response);
         }
@@ -101,10 +102,10 @@ namespace ETicaretAPI.API.Controllers
 
          }*/
         [HttpPost("[action]")]
-        public async Task<IActionResult> Upload([FromForm]FileUploadCommandRequest fileUploadCommandRequest)
+        public async Task<IActionResult> Upload([FromForm] FileUploadCommandRequest fileUploadCommandRequest)
         {
-            FileUploadCommandResponse response=await _mediator.Send(fileUploadCommandRequest);
-            return Ok(response);
+            FileUploadCommandResponse response = await _mediator.Send(fileUploadCommandRequest);
+            return Ok(response.state);
         }
     }
 }

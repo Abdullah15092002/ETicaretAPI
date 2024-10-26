@@ -12,6 +12,6 @@ namespace ETicaretAPI.Application.Features.Commands.FileUpload
     public class FileUploadCommandRequest:IRequest<FileUploadCommandResponse>
     {
         [FromForm]
-       public List<IFormFile> Files { get; set; }
+       public IFormFileCollection Files { get; set; }
     }
 }
