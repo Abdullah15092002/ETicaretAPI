@@ -1,20 +1,13 @@
-﻿using ETicaretAPI.Application.Abstractions;
-using ETicaretAPI.Application.Features.Commands.FileUpload;
+﻿using ETicaretAPI.Application.Features.Commands.FileUpload;
 using ETicaretAPI.Application.Features.Commands.Product.CreateProduct;
 using ETicaretAPI.Application.Features.Commands.Product.RemoveProduct;
 using ETicaretAPI.Application.Features.Commands.Product.UpdateProduct;
 using ETicaretAPI.Application.Features.Queries.Product.GetAllProduct;
 using ETicaretAPI.Application.Features.Queries.Product.GetByIdProduct;
 using ETicaretAPI.Application.Repositories;
-using ETicaretAPI.Application.RequestParameter;
-using ETicaretAPI.Application.ViewModels.Products;
-using ETicaretAPI.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Globalization;
 using System.Net;
 
 namespace ETicaretAPI.API.Controllers
@@ -28,20 +21,37 @@ namespace ETicaretAPI.API.Controllers
         readonly private IProductWriteRepository _productWriteRepository;
         readonly IMediator _mediator;
         readonly private IWebHostEnvironment _webHostEnvironment;
+        readonly private IProductImageFileReadRepository _productImageFileReadRepository;
+        readonly private IProductImageFileWriteRepository _productImageFileWriteRepository;
+        readonly private IFileReadRepository _fileReadRepository;
+        private readonly IFileWriteRepository _fileWriteRepository;
+        private readonly IInvoiceFileReadRepository _invoiceFileReadRepository;
+        private readonly IInvoiceFileWriteRepository _invoiceFileWriteRepository;
 
         public ProductsController(
-            IProductReadRepository productReadRepository,
+            IProductReadRepository productReadRepository, 
             IProductWriteRepository productWriteRepository,
             IMediator mediator,
-            IWebHostEnvironment webHostEnvironment
-            )
+            IWebHostEnvironment webHostEnvironment,
+            IProductImageFileReadRepository productImageFileReadRepository,
+            IProductImageFileWriteRepository productImageFileWriteRepository,
+            IFileReadRepository fileReadRepository,
+            IFileWriteRepository fileWriteRepository,
+            IInvoiceFileReadRepository invoiceFileReadRepository,
+            IInvoiceFileWriteRepository invoiceFileWriteRepository)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
             _mediator = mediator;
             _webHostEnvironment = webHostEnvironment;
-
+            _productImageFileReadRepository = productImageFileReadRepository;
+            _productImageFileWriteRepository = productImageFileWriteRepository;
+            _fileReadRepository = fileReadRepository;
+            _fileWriteRepository = fileWriteRepository;
+            _invoiceFileReadRepository = invoiceFileReadRepository;
+            _invoiceFileWriteRepository = invoiceFileWriteRepository;
         }
+
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] GetAllProductQueryRequest getAllProductQueryRequest)
         {
@@ -80,32 +90,11 @@ namespace ETicaretAPI.API.Controllers
             RemoveProductCommandResponse response = await _mediator.Send(removeProductCommandRequest);
             return Ok(response.isdeleted);
         }
-        /*[HttpPost("[action]")]
-         public async Task<IActionResult> Upload()
-         {
-
-
-             string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "resource/product-images");
-             if (!Directory.Exists(uploadPath))
-             {
-                 Directory.CreateDirectory(uploadPath);
-             }
-             Random random = new();
-             foreach (IFormFile file in Request.Form.Files)
-             {
-                 string fullPath = Path.Combine(uploadPath, $"{random.Next()}{Path.GetExtension(file.FileName)}");
-                 using FileStream fileStream = new(fullPath, FileMode.Create, FileAccess.Write, FileShare.None, 1024 * 1024, useAsync: false);
-                 await file.CopyToAsync(fileStream);
-                 await fileStream.FlushAsync();
-             }
-             return Ok();
-
-         }*/
         [HttpPost("[action]")]
         public async Task<IActionResult> Upload([FromForm] FileUploadCommandRequest fileUploadCommandRequest)
         {
             FileUploadCommandResponse response = await _mediator.Send(fileUploadCommandRequest);
-            return Ok(response.state);
+            return Ok(response);
         }
     }
 }
