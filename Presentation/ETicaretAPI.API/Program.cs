@@ -3,6 +3,7 @@ using ETicaretAPI.Application;
 using ETicaretAPI.Application.Validators.Products;
 using ETicaretAPI.Infrastructure;
 using ETicaretAPI.Infrastructure.Filters;
+using ETicaretAPI.Infrastructure.Services.Storage.Local;
 using ETicaretAPI.Persistance;
 using ETicaretAPI.SignalR;
 using FluentValidation;
@@ -22,6 +23,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddPersistanceServices();
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices();
+builder.Services.AddStorage<LocalStorage>();
 builder.Services.AddSignalRServices();
 
 

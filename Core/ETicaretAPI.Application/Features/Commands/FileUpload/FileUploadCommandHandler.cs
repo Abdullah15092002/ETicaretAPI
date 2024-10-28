@@ -1,4 +1,5 @@
-﻿using ETicaretAPI.Application.Repositories;
+﻿using ETicaretAPI.Application.Abstractions.Storage;
+using ETicaretAPI.Application.Repositories;
 using ETicaretAPI.Application.Services;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
@@ -15,19 +16,23 @@ namespace ETicaretAPI.Application.Features.Commands.FileUpload
     public class FileUploadCommandHandler : IRequestHandler<FileUploadCommandRequest, FileUploadCommandResponse>
     {
          
-        readonly IFileService _fileService;
+        readonly IStorageService _storageService;
         readonly IProductImageFileWriteRepository _productImageFileWriteRepository;
-        public FileUploadCommandHandler(IFileService fileService,IProductImageFileWriteRepository productImageFileWriteRepository)
+        public FileUploadCommandHandler(
+            IProductImageFileWriteRepository productImageFileWriteRepository,
+            IStorageService storageService
+            )
         {
            _productImageFileWriteRepository = productImageFileWriteRepository;
-            _fileService = fileService;
+            _storageService = storageService;
         }
         public async Task<FileUploadCommandResponse> Handle(FileUploadCommandRequest request, CancellationToken cancellationToken)
         {
-          var datas=  await _fileService.UploadAsync("resource/product-images", request.Files);
+          var datas=  await _storageService.UploadAsync("resource/product-images", request.Files);
            await _productImageFileWriteRepository.AddRangeAsync(datas.Select(datas => new T.ProductImageFile() {
            FileName=datas.fileName,
-           Path=datas.path,
+           Path=datas.pathOrContainerName,
+           Storage=_storageService.StorageName,
            }).ToList());
            await _productImageFileWriteRepository.SaveAsync();
             return new();

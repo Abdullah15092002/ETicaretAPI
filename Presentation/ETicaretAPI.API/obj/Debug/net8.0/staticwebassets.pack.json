@@ -1,12 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\abdul\\source\\repos\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\E-Ticaret-Api-Proje.png",
-      "PackagePath": "staticwebassets\\resource\\product-images\\E-Ticaret-Api-Proje.png"
-    },
-    {
-      "Id": "C:\\Users\\abdul\\source\\repos\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\Malzeme-iletisim-ilk.png",
-      "PackagePath": "staticwebassets\\resource\\product-images\\Malzeme-iletisim-ilk.png"
+      "Id": "C:\\Users\\abdul\\source\\repos\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\Files",
+      "PackagePath": "staticwebassets\\resource\\product-images"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ETicaretAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",
